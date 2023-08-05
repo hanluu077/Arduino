@@ -1,0 +1,5 @@
+Task: Creating a colour changing light detector based on the distance detected by the Ultrasonic Distance Sensor
+
+> RED LIGHT: Distance is between (0 - 100cm)
+> GREEN LIGHT: Distance is between (100 - 200cm)
+> BLUE LIGHT: Distance is (over 300cm)
