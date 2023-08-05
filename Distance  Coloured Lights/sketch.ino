@@ -1,3 +1,4 @@
+
 int redPin = 11;
 int greenPin = 10;
 int bluePin = 9;
@@ -9,23 +10,19 @@ int distance;
 
 
 void setup() {
-// put your setup code here, to run once:
 //  LED RGB 
 pinMode(redPin, OUTPUT);
 pinMode(greenPin, OUTPUT);
 pinMode(bluePin, OUTPUT);
 
-// ULTRASOUNT
+// ULTRASOUND
 pinMode(trigPin, OUTPUT);
 pinMode(echoPin, INPUT);
 Serial.begin(9600);
-
-
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  // clear the trig pin
+  // Clear the trig pin
   digitalWrite(trigPin, LOW);
   delay(2000);
   digitalWrite(trigPin, HIGH);
@@ -42,6 +39,7 @@ void loop() {
   Serial.print("Distance: ");
   Serial.println(distance);
 
+  // Calculates the distance and switch the according lights
   if (distance > 0 & distance <= 100){
     digitalWrite(redPin, HIGH);
     digitalWrite(greenPin, LOW);
